@@ -1,43 +1,56 @@
 import React from 'react';
 
 
-function MedicalTreatmentPanel(){
+function MedicalTreatmentPanel(props){
+    {props.treatId}
+    {props.treatCourseId}
+    {props.type}
+    {props.category}
+    {props.name}
+    {props.startDate}
 
-    const [productId, setProductId] = React.useState('');
-
-    const [productName, setProductName] = React.useState('');
-
-    const [productDatePurchased, setProductDatePurchased] = React.useState('');
+    const [treatID, settreatId] = React.useState('');
+    const [name, setname] = React.useState('');
+    const [category, setcategory] = React.useState('');
+    const [treatCourseId, settreatCourseId] = React.useState('');
+    const [startDate, setstartDate] = React.useState('');
 
 
     function showClickHandler () {
-        window.alert("[" + "id = "+ productId + ", name = "+productName+ ", datePurchased = "+ productDatePurchased +"]");
+        window.alert("[" + "id = "+ treatId + ", name = "+Name+ ", startDate = "+ startDate +"]");
 
     }
 
     
     function clearClickHandler () {
-        setProductId('');
-        setProductName('');
-        setProductDatePurchased('');
+        settreatId('');
+        setname('');
+        setcategory('');
+        settreatCourseID ("");
+        setstartDate ("");
+
     }
 
 
     return(
         <div>
 
-            <input placeholder="Product ID" value={productId}  onChange = { e => setProductId(e.target.value)}  ></input>
+            <input placeholder="treatID" value={treatId}  onChange = { e => settreatID(e.target.value)}  ></input>
 
             <br/>
 
-            <input placeholder="Product Name" value={productName}  onChange = { e => setProductName(e.target.value)}  ></input>
+            <input placeholder=" Name" value={Name}  onChange = { e => setName(e.target.value)}  ></input>
 
             <br/>
 
-            <input placeholder="Product Date Purchased" value={productDatePurchased}  onChange = { e => setProductDatePurchased(e.target.value)}  ></input>
+            <input placeholder="startDate" value={startDate}  onChange = { e => setstartDate(e.target.value)}  ></input>
             
             <br/>
 
+            <input placeholder="treatCourseID " value={treatCourseID}  onChange = { e => settreatCourseID(e.target.value)}  ></input>
+            <br/>
+
+            <input placeholder="category" value={category}  onChange = { e => setcategory(e.target.value)}  ></input>
             <br/>
 
             <button style={{color:"blue"}} onClick={showClickHandler}>show</button>

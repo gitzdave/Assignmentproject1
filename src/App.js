@@ -1,6 +1,7 @@
 import React from "react";
 import "./style.css";
 import MedicalTreatment from "./MedicalTreatment";
+import MedicalTreatmentPanel from "./MedicalTreatmentPanel";
 
 var treatID = 1233
 var treatCourseId=12233
@@ -24,7 +25,7 @@ export default function App() {
 
 <button onClick = {clickHandler}> ShowRecords </button>
 
-
+<MedicalTreatmentPanel />
     </div>
   );
 }

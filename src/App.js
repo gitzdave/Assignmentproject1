@@ -12,19 +12,14 @@ var startDate= "02/12/2021"
 
 
     
-  function clickHandler (){
-    window.alert ("[" + "name = "+ props.name+ ", treatID = "+ props.treatID + ", startDate = "+props.startDate +"  , type = " + props.type + "category= " + props.category + "treatCourseId =" + props.treatCourseId + "]"  )
-  }
+  
+  
 
 export default function App() {
   return (
     <div>
-     <MedicalTreatment  name= {name}/> 
-     <br/> 
-     <MedicalTreatment  treatCourseId= {treatCourseId}/> 
 
-<button onClick = {clickHandler}> ShowRecords </button>
-
+<br/><br/>
 <MedicalTreatmentPanel />
     </div>
   );

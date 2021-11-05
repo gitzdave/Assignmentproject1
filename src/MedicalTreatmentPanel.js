@@ -16,42 +16,42 @@ function MedicalTreatmentPanel(props){
     const [startDate, setstartDate] = React.useState('');
     const [type, settype] = React.useState('');
 
-    function showClickHandler () {
-        window.alert("[" + "id = "+ treatId + ", name = "+name+ ", startDate = "+ startDate +"]");
-
+    function showClickHandler (props) {
+        window.alert("[" + "name = "+ props.name+ ", treatID = "+ props.treatId + ", startDate = "+props.startDate +" ,type = " + props.type + " ,category= " + props.category + " ,treatCourseId =" + props.treatCourseId + "]" )
     }
-
-    
     function clearClickHandler () {
         settreatId('');
         setname('');
         setcategory('');
-        settreatCourseID ("");
+        settreatCourseId ("");
         setstartDate ("");
-
+        settype ("");
     }
 
 
     return(
         <div>
 
-            <input placeholder="treatID" value={treatId}  onChange = { e => settreatID(e.target.value)}  ></input>
+            <input placeholder="TreatID" value={treatId}  onChange = { e => settreatId(e.target.value)}  ></input>
 
             <br/>
 
-            <input placeholder=" Name" value={name}  onChange = { e => setName(e.target.value)}  ></input>
+            <input placeholder=" Name" value={name}  onChange = { e => setname(e.target.value)}  ></input>
 
             <br/>
 
-            <input placeholder="startDate" value={startDate}  onChange = { e => setstartDate(e.target.value)}  ></input>
+            <input placeholder="StartDate" value={startDate}  onChange = { e => setstartDate(e.target.value)}  ></input>
             
             <br/>
 
-            <input placeholder="treatCourseID " value={treatCourseId}  onChange = { e => settreatCourseID(e.target.value)}  ></input>
+            <input placeholder="TreatCourseID " value={treatCourseId}  onChange = { e => settreatCourseId(e.target.value)}  ></input>
             <br/>
 
-            <input placeholder="category" value={category}  onChange = { e => setcategory(e.target.value)}  ></input>
+            <input placeholder="Category" value={category}  onChange = { e => setcategory(e.target.value)}  ></input>
             <br/>
+            <input placeholder="Type" value={type}  onChange = { e => settype(e.target.value)}  ></input>
+
+            <br/><br/><br/><br/>
 
             <button style={{color:"blue"}} onClick={showClickHandler}>show</button>
 
@@ -59,7 +59,7 @@ function MedicalTreatmentPanel(props){
 
             <br/><br/><br/><br/>
 
-            <input placeholder="Some value"></input>
+        
 
         </div>
     );

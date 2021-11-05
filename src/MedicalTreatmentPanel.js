@@ -9,15 +9,15 @@ function MedicalTreatmentPanel(props){
     {props.name}
     {props.startDate}
 
-    const [treatID, settreatId] = React.useState('');
+    const [treatId, settreatId] = React.useState('');
     const [name, setname] = React.useState('');
     const [category, setcategory] = React.useState('');
     const [treatCourseId, settreatCourseId] = React.useState('');
     const [startDate, setstartDate] = React.useState('');
-
+    const [type, settype] = React.useState('');
 
     function showClickHandler () {
-        window.alert("[" + "id = "+ treatId + ", name = "+Name+ ", startDate = "+ startDate +"]");
+        window.alert("[" + "id = "+ treatId + ", name = "+name+ ", startDate = "+ startDate +"]");
 
     }
 
@@ -39,7 +39,7 @@ function MedicalTreatmentPanel(props){
 
             <br/>
 
-            <input placeholder=" Name" value={Name}  onChange = { e => setName(e.target.value)}  ></input>
+            <input placeholder=" Name" value={name}  onChange = { e => setName(e.target.value)}  ></input>
 
             <br/>
 
@@ -47,7 +47,7 @@ function MedicalTreatmentPanel(props){
             
             <br/>
 
-            <input placeholder="treatCourseID " value={treatCourseID}  onChange = { e => settreatCourseID(e.target.value)}  ></input>
+            <input placeholder="treatCourseID " value={treatCourseId}  onChange = { e => settreatCourseID(e.target.value)}  ></input>
             <br/>
 
             <input placeholder="category" value={category}  onChange = { e => setcategory(e.target.value)}  ></input>

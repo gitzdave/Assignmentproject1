@@ -1,5 +1,5 @@
 import React from 'react';
-
+import MedicalTreatment from './MedicalTreatment';
 
 function MedicalTreatmentPanel(props){
     {props.treatId}
@@ -19,8 +19,16 @@ function MedicalTreatmentPanel(props){
     function showSubmit (events) {
         alert("[" + "name = "+ name+ ", treatID = "+ treatId + ", startDate = "+startDate +" ,type = " + type + " ,category= " + category + " ,treatCourseId =" + treatCourseId + "]" );
     
-
     events.preventDefault();
+    settreatId('');
+    setname('');
+    setcategory('');
+    settreatCourseId ("");
+    setstartDate ("");
+    settype ("");
+    
+
+
     }
     function clearClickHandler () {
         settreatId('');
@@ -55,22 +63,15 @@ function MedicalTreatmentPanel(props){
             <br/>
             <input placeholder="Type" value={type}  onChange = { e => settype(e.target.value)}  ></input>
 
-            <br/><br/><br/><br/>
-
-        
-            <button style={{color:"red"}} onClick={clearClickHandler}>Clear</button>
-
-            <br/><br/><br/><br/>
+            <br/><br/>
          <hr/>
 
-         {name  && treatCourseId   && category && type && startDate
-         
-          <input  type = "submit" value=" Show treatment Records "  display = "inline-block" />
-         }
+         {name  && treatCourseId   && category && type && startDate && treatId &&
+          <input  type = "submit" value=" Show treatment Records "  display = "in-line-block" />}
 
         </form>
     );
-
 }
+
 
 export default MedicalTreatmentPanel;

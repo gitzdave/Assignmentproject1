@@ -16,9 +16,12 @@ function MedicalTreatmentPanel(props){
     const [startDate, setstartDate] = React.useState('');
     const [type, settype] = React.useState('');
 
-    function showClickHandler (props) {
-        window.alert("[" + "name = "+ props.name+ ", treatID = "+ props.treatId + ", startDate = "+props.startDate +" ,type = " + props.type + " ,category= " + props.category + " ,treatCourseId =" + props.treatCourseId + "]" )
+    function showSubmit (events) {
+        alert("[" + "name = "+ name+ ", treatID = "+ treatId + ", startDate = "+startDate +" ,type = " + type + " ,category= " + category + " ,treatCourseId =" + treatCourseId + "]" )
     }
+
+    events.preventDefault();
+
     function clearClickHandler () {
         settreatId('');
         setname('');
@@ -30,7 +33,8 @@ function MedicalTreatmentPanel(props){
 
 
     return(
-        <div>
+        <form onSubmit = {showSubmit}>
+            <h1>  Medical Records  </h1>
 
             <input placeholder="TreatID" value={treatId}  onChange = { e => settreatId(e.target.value)}  ></input>
 
@@ -53,15 +57,20 @@ function MedicalTreatmentPanel(props){
 
             <br/><br/><br/><br/>
 
-            <button style={{color:"blue"}} onClick={showClickHandler}>show</button>
-
+        
             <button style={{color:"red"}} onClick={clearClickHandler}>Clear</button>
 
             <br/><br/><br/><br/>
+         <hr/>
 
-        
+         {name  && treatCourseId   && category && type && startDate
+         
+          <input  type = "submit" value=" Show treatment Records "  display = "inline-block" /> 
 
-        </div>
+         
+        }
+
+        </form>
     );
 
 }

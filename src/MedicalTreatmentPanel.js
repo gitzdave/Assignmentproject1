@@ -17,11 +17,11 @@ function MedicalTreatmentPanel(props){
     const [type, settype] = React.useState('');
 
     function showSubmit (events) {
-        alert("[" + "name = "+ name+ ", treatID = "+ treatId + ", startDate = "+startDate +" ,type = " + type + " ,category= " + category + " ,treatCourseId =" + treatCourseId + "]" )
-    }
+        alert("[" + "name = "+ name+ ", treatID = "+ treatId + ", startDate = "+startDate +" ,type = " + type + " ,category= " + category + " ,treatCourseId =" + treatCourseId + "]" );
+    
 
     events.preventDefault();
-
+    }
     function clearClickHandler () {
         settreatId('');
         setname('');
@@ -65,10 +65,8 @@ function MedicalTreatmentPanel(props){
 
          {name  && treatCourseId   && category && type && startDate
          
-          <input  type = "submit" value=" Show treatment Records "  display = "inline-block" /> 
-
-         
-        }
+          <input  type = "submit" value=" Show treatment Records "  display = "inline-block" />
+         }
 
         </form>
     );

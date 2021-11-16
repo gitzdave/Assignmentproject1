@@ -3,6 +3,7 @@ import "./style.css";
 import MedicalTreatment from "./MedicalTreatment";
 import MedicalTreatmentPanel from "./MedicalTreatmentPanel";
 import './App.css';
+import MedicalTreatmentList from "./MedicalTreatmentList";
 
 var treatId = "12"
 var treatCourseId = "12233"

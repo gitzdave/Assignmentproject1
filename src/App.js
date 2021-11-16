@@ -4,7 +4,7 @@ import MedicalTreatment from "./MedicalTreatment";
 import MedicalTreatmentPanel from "./MedicalTreatmentPanel";
 import './App.css';
 
-var treatId = "1233"
+var treatId = "12"
 var treatCourseId = "12233"
 var type = "Tretament"
 var category= "Vaccination"
@@ -17,30 +17,12 @@ var startDate= "02/12/2021"
 export default function App() {
   return (
     
-<div className="app-container">
-        <table>
-          <thead>
-            <tr>
-            <th>TreatID</th>
-              <th>Name</th>
-              <th>TreatCourseID</th>
-              <th>StartDate</th>
-              <th>category</th>
-              <th>Type</th>
-            </tr>  
-          </thead>
-          <tbody>
-            <td>{treatId} </td>
-           <td>{name} </td>
-           <td>{treatCourseId} </td>
-           <td>{startDate} </td>
-           <td>{category} </td>
-           <td>{type} </td>
-            </tbody>
-            </table>
-            
+  <div>
+
 <br/><br/>
-<MedicalTreatmentPanel />
-    </div>
+<MedicalTreatmentPanel/>
+<br/><br/>
+<MedicalTreatment name = {name} treatid={treatId} type = {type} treatCourseId={treatCourseId} category={category}startDate = {startDate}/>
+</div>
   );
 }

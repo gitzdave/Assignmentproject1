@@ -3,12 +3,8 @@ import MedicalTreatment from './MedicalTreatment';
 import nanoid from './nanoid';
 
 function MedicalTreatmentPanel(props){
-    {props.treatId}
-    {props.treatCourseId}
-    {props.type}
-    {props.category}
-    {props.name}
-    {props.startDate}
+    
+   
 
     const [treatId, settreatId] = React.useState('');
     const [name, setname] = React.useState('');

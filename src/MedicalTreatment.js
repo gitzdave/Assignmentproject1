@@ -1,36 +1,30 @@
 import React from 'react';
-
+import "./App.css";
 
 
 function MedicalTreatment(props){
   
 return (
 
-<div container ="app-container">
-
+<div className ="app-container">
 <table>
   <thead>
-    <tr>TreatID </tr>
-    <tr>TreatCourseID </tr>
-    <tr>Name </tr>
-    <tr>StartDate </tr>
-    <tr>Category </tr>
-    <tr>Type </tr>
+    <th>TreatID </th>
+    <th>TreatCourseID </th>
+    <th>Name </th>
+    <th>StartDate </th>
+    <th>Category </th>
+    <th>Type </th>
      </thead>
   
   <tbody>
-    <td> {props.treatid}
-       </td>
-       <td> {props.type}
-       </td>
-       <td> {props.name}
-       </td>
-       <td> {props.startDate}
-       </td>
-       <td> {props.category}
-       </td>
+       <td> {props.treatid} </td>
+       <td> {props.type}</td>
+       <td> {props.name} </td>
+       <td> {props.startDate} </td>
+       <td> {props.category}</td>
+       <td> {props.treatCourseId} </td>
      </tbody>
-  
 
    </table>
 

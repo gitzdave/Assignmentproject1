@@ -18,25 +18,21 @@ function MedicalTreatmentPanel(props){
         alert("[" + "name = "+ name+ ", treatID = "+ treatId + ", startDate = "+startDate +" ,type = " + type + " ,category= " + category + " ,treatCourseId =" + treatCourseId + "]" );
     } 
      
-
-    
-
-
-
     function clearClickHandler () {
-        settreatId('');
-        setname('');
-        setcategory('');
-        settreatCourseId ("");
-        setstartDate ("");
-        settype ("");
+        setTreatId('');
+        setName('');
+        setCategory('');
+        setTreatCourseId ("");
+        setStartDate ("");
+        setType ("");
     }
 
-
     return(
+
+
         <form >
             <h1>  Medical Records  </h1>
-
+            
             <input placeholder="TreatID" value = {treatId} type="text"  onChange = {e=> setTreatId (e.target.value)} name= "treatId" ></input>
 
             <br/>
@@ -45,18 +41,18 @@ function MedicalTreatmentPanel(props){
 
             <br/>
 
-            <input placeholder="StartDate" type="text"  onChange = { e=> startDate(e.target.value)} name="startDate"  value= {startDate} ></input>
+            <input placeholder="StartDate" type="text"  onChange = { e=> setStartDate(e.target.value)} name="startDate"  value= {startDate} ></input>
             
             <br/>
 
-            <input placeholder="TreatCourseID "type="text"    onChange = {e=> treatCourseId(e.target.value) } name="treatCourseId"  value= {treatCourseId} ></input>
+            <input placeholder="TreatCourseID "type="text"    onChange = {e=> setTreatCourseId(e.target.value) } name="treatCourseId"  value= {treatCourseId} ></input>
             <br/>
 
             <input placeholder="Category"type="text"   onChange = {e=> setCategory(e.target.value)}name ="category"  value= {category}></input>
             <br/>
             <input placeholder="Type" type="text"   onChange = {e=> setType(e.target.value) } name="type" value={type} ></input>
 
-          <button type = "submit">Add </button>
+          <button type = "button"  onClick = {display}>Add </button>
           <button onClick = {clearClickHandler}> Clear</button>
         </form>
         

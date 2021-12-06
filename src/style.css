@@ -1,3 +1,34 @@
 h1, p {
   font-family: Lato;
+  background-color: aqua;
+}
+
+form {
+  display: flex;
+  gap: 5px;
+  font-size: 10px;
+  flex-direction:column;
+  text-align: center
+}
+.h{
+
+  text-align: center;
+  text-decoration: solid;
+  text-decoration-color: red; 
+
+
+}p,li {
+
+  font-family: Lato;
+  background-color:antiquewhite;
+  text-align: left;
+text-decoration:aqua;
+}
+.imageclass{
+  height:100px;
+  width:100px;
+}
+
+.p1{
+  text-align: center;
 }

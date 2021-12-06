@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'; 
 
 
 
-function MedicalTreatmentPanel(props){
+function MedicalTreatmentPanel(props){ 
     
    
 
@@ -11,9 +11,9 @@ function MedicalTreatmentPanel(props){
     const [category, setCategory] = React.useState('');
     const [treatCourseId, setTreatCourseId] = React.useState('');
     const [startDate, setStartDate] = React.useState('');
-   
+    const [type, setType] = React.useState('');
     
-    const [data,setData] =React.useState([{name, treatCourseId,startDate,type,treatId,category}]);
+    
 
     function display () {
         alert("[" + "name = "+ name+ ", treatID = "+ treatId + ", startDate = "+startDate +" ,type = " + type + " ,category= " + category + " ,treatCourseId =" + treatCourseId + "]" );
@@ -32,8 +32,6 @@ function MedicalTreatmentPanel(props){
     }
 
     return(
-  
-
         <form >
             <br/>
             <h1 className ="h">  Medical Records  </h1>
@@ -43,26 +41,18 @@ function MedicalTreatmentPanel(props){
             <br/>
 
             <input placeholder=" Name" value= {name} type="text"  onChange={e=> setName (e.target.value)} name="name" ></input>
-
             <br/>
-
             <input placeholder="StartDate" type="text"  onChange = { e=> setStartDate(e.target.value)} name="startDate"  value= {startDate} ></input>
-            
             <br/>
-
             <input placeholder="TreatCourseID "type="text"    onChange = {e=> setTreatCourseId(e.target.value) } name="treatCourseId"  value= {treatCourseId} ></input>
             <br/>
-
             <input placeholder="Category"type="text"   onChange = {e=> setCategory(e.target.value)}name ="category"  value= {category}></input>
             <br/>
             <input placeholder="Type" type="text"   onChange = {e=> setType(e.target.value) } name="type" value={type} ></input>
 
           <button type = "button"  onClick = {display}>Add </button>
           <br/>
-          <br/>
-          <button onClick = {clearClickHandler}> Clear</button>
-          <br/>
-
+          <button onClick = {clearClickHandler}> Clear</button>   
         </form>
 
         
